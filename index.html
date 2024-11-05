@@ -3,139 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sabrina low JM</title>
+  <title>sabrina low JM</title>
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   
-    <style>
-        body {
-            font-family: 'Questrial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 90vh; /* Minimum height of 100% of the viewport height */
-            color: black;
-            animation: fadeIn 1s ease-in-out 0s forwards; /* Animation for fade-in effect */
-        }
+  <style>
+      body {
+          font-family: 'Questrial', sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-height: 90vh; /* Minimum height of 90% of the viewport height */
+          color: black;
+          animation: fadeIn 1s ease-in-out 0s forwards; /* Animation for fade-in effect */
+      }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
 
-        .fade-out {
-            animation: fadeOut 0.5s ease-in-out 0s forwards; /* Animation for fade-out effect */
-        }
+      .fade-out {
+          animation: fadeOut 0.5s ease-in-out 0s forwards; /* Animation for fade-out effect */
+      }
 
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
+      @keyframes fadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+      }
 
-      
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            max-width: 1200px;
-            margin-top: 20px;
-        }
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 90%;
+          max-width: 1200px;
+          margin-top: 20px;
+      }
 
-        .site-name {
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            color: black;
-        }
+      .site-name {
+          font-size: 24px;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+      }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+      nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
 
-        nav li {
-            margin-left: 20px;
-            font-weight: 300;
-        }
+      nav li {
+          margin-left: 20px;
+          font-weight: 300;
+      }
 
-        nav a {
-            text-decoration: none;
-            color: black;
-        }
+      nav a {
+          text-decoration: none;
+          color: black;
+      }
 
-        .content {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    flex: 3; /* This is not necessary unless you have other flex items; you might consider removing it */
-    align-items: center; /* Centre items horizontally */
-    justify-content: center; /* Centre items vertically */
-    width: 90%;
-    max-width: 1200px;
-    margin: 70px auto 0; /* Correctly centre the content horizontally */
-    color: black;
+      .content {
+          display: flex;
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Centre items horizontally */
+          justify-content: center; /* Centre items vertically */
+          width: 90%;
+          max-width: 1200px;
+          margin: 70px auto 0; /* Correctly centre the content horizontally */
+          color: black;
+      }
+
+      .text-section {
+          width: 100%; /* Use full width of the parent */
+          text-align: center; /* Use center to correctly align text */
+          color: black;
+      }
+
+      .text-section a {
+          color: black; /* This will affect all links inside text-section */
+      }
+
+.madsen-link {
+    text-decoration: none;
+    color: red; /* Remove underline from this link */
+    font-weight: bold; /* Make the text bold */
 }
 
-.text-section {
-    width: 100%; /* Use full width of the parent */
-    text-align: center; /* Use center to correctly align text */
-    color: black;
-}
 
+      footer {
+          font-family: 'Questrial', sans-serif; /* Using Questrial font */
+          font-weight: 200; /* Thin weight */
+          font-size: 12px;
+          text-align: left; /* Align text to the left */
+          width: 90%; /* Ensure footer occupies full width */
+          max-width: 1200px;
+          margin-top: auto;
+          display: block; /* Ensure footer is treated as a block-level element */
+          color: black;
+      }
 
-        .text-section a {
-            color: black;
-        }
-      
-       footer {
-            font-family: 'Reddit Mono', sans-serif; /* Using Roboto as an example */
-            font-weight: 200; /* Thin weight */
-            font-size: 12px;
-            text-align: left; /* Align text to the left */
-            width: 90%; /* Ensure footer occupies full width */
-            max-width: 1200px;
-            margin-top: auto;
-            display: block; /* Ensure footer is treated as a block-level element */
-            color: black;
-        }
+      footer span {
+          margin-right: 40px; /* Adds space between footer entries */
+      }
 
-        footer span {
-            margin-right: 40px; /* Adds space between footer entries */
-        }
-
-        footer a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Optional: ensures links use the footer's text color */
-        }}
-      
-          </style>
+      footer a {
+          text-decoration: none; /* Remove underline from links */
+          color: inherit; /* Optional: ensures links use the footer's text color */
+      }
+  </style>
   
-  </head>
-
-  </head>
+</head>
 <body>
     <header>
         <a href="index.html" class="site-name">sabrina low JM</a>
         <nav>
             <ul>
-                <li><a href="research.html">Research</a></li>
+                <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
     </header>
     <div class="content">
         <div class="text-section">
             <h1>Hi!</h1>
-            <p> I am a final year student at UoD, studying biological chemistry & drug discovery. I am currently doing my honours project @ <a href="https://ralitsamadsen.wordpress.com"> The Madsen Lab</a>. I enjoy playing around with molecular modelling tools and learning new things in my free time ^_^ </p>
+            <p>I am a final year student at UoD, studying biological chemistry & drug discovery. I am currently doing my honours project at <a href="https://ralitsamadsen.wordpress.com" class="madsen-link">The Madsen Lab</a>. I enjoy playing around with molecular modelling tools and learning new things in my free time ^_^</p>
+        </div>
     </div>
 
     <footer>
-        <span> 2024 </span>
+        <span>2024</span>
     </footer>
 
     <script>
@@ -143,7 +145,7 @@
         const links = document.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent the default link behavior
+                e.preventDefault(); // Prevent the default link behaviour
                 const destination = this.href; // Get the link's target
 
                 document.body.classList.add('fade-out'); // Apply the fade-out effect
