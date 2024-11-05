@@ -118,8 +118,24 @@
           text-decoration: none; /* Remove underline from links */
           color: inherit; /* Optional: ensures links use the footer's text color */
       }
-  </style>
-  
+
+  /* Styling for the iframe wrapper to position it near the footer */
+        .iframe-wrapper {
+            position: absolute;
+            bottom: 110px; /* Positions it a bit above the footer */
+            width: 90%; 
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+        }
+
+        .spotify-iframe {
+            border-radius: 13px;
+            width: 50%;
+            height: 101px;
+        }
+    </style>
+    
 </head>
 <body>
     <header>
@@ -136,20 +152,51 @@
             <p>I am a final year student at UoD, studying biological chemistry & drug discovery. I am currently doing my honours project at <a href="https://ralitsamadsen.wordpress.com" class="madsen-link">The Madsen Lab</a>. I enjoy playing around with molecular modelling tools and learning new things in my free time ^_^</p>
         </div>
     </div>
+    
+  <div class="iframe-wrapper">
+        <iframe
+            class="spotify-iframe"
+            src="https://open.spotify.com/embed/track/0z7GuzX6SvdWx7KDW5Zxg6?utm_source=generator&theme=0"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+    </div>
 
     <footer style="display: flex; align-items: center;">
-    <span>
-        <a href="https://github.com/salmonsabshimi">
-            <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" style="width: 20px; height: 20px;">
-        </a>
-    </span>
-    <span style="margin-left: -17px;">
-        <a href="https://www.linkedin.com/in/sabrina-l-jm/">
-            <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" style="width: 15px; height: 15px;">
-        </a>
-    </span>
-    <span style="margin-left: 1px;">2024</span>
-</footer>
+        <span>
+            <a href="https://github.com/salmonsabshimi">
+                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" style="width: 20px; height: 20px;">
+            </a>
+        </span>
+        <span style="margin-left: -17px;">
+            <a href="https://www.linkedin.com/in/sabrina-l-jm/">
+                <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" style="width: 15px; height: 15px;">
+            </a>
+        </span>
+        <span style="margin-left: 1px;">2024</span>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the default link behaviour
+                const destination = this.href; // Get the link's target
+
+                document.body.classList.add('fade-out'); // Apply the fade-out effect
+
+                setTimeout(function () {
+                    window.location.href = destination;
+                }, 500); // Delay the navigation to allow the fade-out effect to complete
+            });
+        });
+    });
+    </script>
+</body>
+</html>  
+
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
