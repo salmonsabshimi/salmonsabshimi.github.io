@@ -19,7 +19,7 @@
             align-items: center;
             min-height: 90vh; /* Minimum height of 100% of the viewport height */
             color: black;
-            animation: fadeIn 0.5s ease-in-out 0s forwards; /* Animation for fade-in effect */
+            animation: fadeIn 1s ease-in-out 0s forwards; /* Animation for fade-in effect */
         }
 
         @keyframes fadeIn {
@@ -35,6 +35,125 @@
             from { opacity: 1; }
             to { opacity: 0; }
         }
+
+      
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 20px;
+            font-weight: 300;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    flex: 3; /* This is not necessary unless you have other flex items; you might consider removing it */
+    align-items: center; /* Centre items horizontally */
+    justify-content: center; /* Centre items vertically */
+    width: 90%;
+    max-width: 1200px;
+    margin: 70px auto 0; /* Correctly centre the content horizontally */
+    color: black;
+}
+
+.text-section {
+    width: 100%; /* Use full width of the parent */
+    text-align: center; /* Use center to correctly align text */
+    color: black;
+}
+
+
+        .text-section a {
+            color: black;
+        }
+      
+       footer {
+            font-family: 'Reddit Mono', sans-serif; /* Using Roboto as an example */
+            font-weight: 200; /* Thin weight */
+            font-size: 12px;
+            text-align: left; /* Align text to the left */
+            width: 90%; /* Ensure footer occupies full width */
+            max-width: 1200px;
+            margin-top: auto;
+            display: block; /* Ensure footer is treated as a block-level element */
+            color: black;
+        }
+
+        footer span {
+            margin-right: 40px; /* Adds space between footer entries */
+        }
+
+        footer a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Optional: ensures links use the footer's text color */
+        }}
+      
           </style>
   
   </head>
+
+  </head>
+<body>
+    <header>
+        <a href="index.html" class="site-name">sabrina low JM</a>
+        <nav>
+            <ul>
+                <li><a href="research.html">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="text-section">
+            <h1>Hi!</h1>
+            <p> I am a final year student at UoD, studying biological chemistry & drug discovery. I am currently doing my honours project @ <a href="https://ralitsamadsen.wordpress.com"> The Madsen Lab</a>. I enjoy playing around with molecular modelling tools and learning new things in my free time ^_^ </p>
+    </div>
+
+    <footer>
+        <span> 2024 </span>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+                const destination = this.href; // Get the link's target
+
+                document.body.classList.add('fade-out'); // Apply the fade-out effect
+
+                setTimeout(function () {
+                    window.location.href = destination;
+                }, 500); // Delay the navigation to allow the fade-out effect to complete
+            });
+        });
+    });
+    </script>
+</body>
+</html>
