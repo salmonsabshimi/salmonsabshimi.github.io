@@ -96,30 +96,42 @@
     color: red; /* Remove underline from this link */
     font-weight: bold; /* Make the text bold */
 }
+
 .corner-image {
-    position: absolute;   /* Keeps the image in place during scrolling */
-    top: 50px;         /* Distance from the top of the viewport */
-    left: 40px;        /* Distance from the left of the viewport */
-    width: 20vw;       /* Makes the image responsive to viewport width */
-    max-width: 20000px;  /* Limits the size on larger screens */
-    height: auto;      /* Maintains aspect ratio */
-    z-index: 1000;     /* Ensures image appears above other content */
+    position: absolute; /* Keeps the image positioned absolutely */
+    top: 60px;          /* Adjust vertical position below site name */
+    left: 80px;         /* Align within the left margin */
+    width: 20vw;        /* Makes image responsive */
+    max-width: 200px;   /* Ensure it doesn't grow too large */
+    height: auto;       /* Maintain aspect ratio */
+    z-index: 1;         /* Keep above other content */
+    max-width: calc(100% - 80px); /* Ensure the image stays within the viewport */
 }
 
 /* Media query for smaller screens */
-@media (max-width: 3000px) {
+@media (max-width: 600px) {
     .corner-image {
-        width: 25vw;    /* Adjust size for smaller screens */
-        max-width: 200px; /* Ensure reasonable size on mobile */
+        left: 20px;          /* Reduce left margin for smaller screens */
+        width: 30vw;         /* Adjust image width */
+        max-width: 120px;    /* Limit the size on smaller devices */
     }
 }
 
+/* Media query for smaller screens */
 @media (max-width: 1000px) {
     .corner-image {
-        width: 30vw;    /* Further adjust for very small screens */
+        width: 25vw;    /* Adjust size for smaller screens */
         max-width: 150px;
     }
 }
+
+@media (max-width: 600px) {
+    .corner-image {
+        width: 30vw;    /* Further adjust for very small screens */
+        max-width: 120px;
+    }
+}
+
 
 
       footer {
@@ -165,7 +177,8 @@
     </header>
     <div class="content">
       <div class="text-section">
-        <h1>PI3Ka wild type (WT) MD simulations</h1>
+        <h1>PI3Ka wild type (WT) molecular dynamic (MD) simulations</h1>
+        <img src="https://salmonsabshimi.github.io/images/2024-11-06-domain_int.png" alt="Corner Image" class="corner-image">
           <h2>1. Inactive PI3Ka</h2>
           <p>p110α bound to n/iSH2 p85α</p>
           
@@ -175,7 +188,7 @@
 </video>
           
            <h2>2. Active PI3Ka</h2>
-          <p>∆p110α</p>
+          <p>∆ABD p110α</p>
           <video width="640" height="360" controls>
   <source src="https://salmonsabshimi.github.io/videos/PI3ka_active_v3.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -185,8 +198,6 @@
         </div>
     </div>
   
-  
-<img src="https://salmonsabshimi.github.io/images/2024-11-06-domain_int.png" alt="Corner Image" class="corner-image">
 
 <footer style="display: flex; align-items: center;">
     <span>
