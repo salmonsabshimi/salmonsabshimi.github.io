@@ -96,6 +96,30 @@
     color: red; /* Remove underline from this link */
     font-weight: bold; /* Make the text bold */
 }
+.corner-image {
+    position: absolute;   /* Keeps the image in place during scrolling */
+    top: 50px;         /* Distance from the top of the viewport */
+    left: 40px;        /* Distance from the left of the viewport */
+    width: 20vw;       /* Makes the image responsive to viewport width */
+    max-width: 20000px;  /* Limits the size on larger screens */
+    height: auto;      /* Maintains aspect ratio */
+    z-index: 1000;     /* Ensures image appears above other content */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 3000px) {
+    .corner-image {
+        width: 25vw;    /* Adjust size for smaller screens */
+        max-width: 200px; /* Ensure reasonable size on mobile */
+    }
+}
+
+@media (max-width: 1000px) {
+    .corner-image {
+        width: 30vw;    /* Further adjust for very small screens */
+        max-width: 150px;
+    }
+}
 
 
       footer {
@@ -124,6 +148,8 @@
     max-width: 80%;
     height: auto;
   }
+
+
   
   </style>
   
@@ -159,6 +185,9 @@
         </div>
     </div>
   
+  
+<img src="https://salmonsabshimi.github.io/images/2024-11-06-domain_int.png" alt="Corner Image" class="corner-image">
+
 <footer style="display: flex; align-items: center;">
     <span>
         <a href="https://github.com/salmonsabshimi">
