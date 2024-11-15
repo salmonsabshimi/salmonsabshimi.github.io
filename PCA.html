@@ -132,7 +132,20 @@
     }
 }
 
+iframe {
+    width: 100%;
+    max-width: 800px; /* Keep the original width on larger screens */
+    height: auto;
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+    border: 0; /* Removes border */
+}
 
+
+@media (max-width: 600px) {
+    iframe {
+        height: 300px; /* Set a fixed height for very small screens */
+    }
+}
 
       footer {
           font-family: 'Questrial', sans-serif; /* Using Questrial font */
@@ -176,23 +189,29 @@
     </header>
     <div class="content">
       <div class="text-section">
-        <h1>Visualisation of First Eigenvector obtained from Principal Component Analysis (Replicate 1)</h1>
+        <h1>Principal Component Analysis (PCA)</h1>
+        <p>conducted after RMSD analyses to further evaluate the convergence of replicates and identify dominant motions</p>
+    <h2>1. PCA of Replicate 1 (R1) and Cross-Projection of Replicates</h2>
+    <p>PCA was conducted on R1 and its eigenvectors were used as the reference space for analysing the trajectories of R2 & R3 after alignment to an average structure</p>
+    
+    <iframe src="https://salmonsabshimi.github.io/plots/PCA_WT_inactive.html" width="800" height="600" frameborder="0"></iframe>
+    <p>replicates sample similar conformational spaces</p>
+        <h2>2. Visualisation of First and Second Eigenvectors of R1 obtained from PCA</h2>
+        These eigenvectors represent the first 2 dominant modes sampled by R1  <br>
+        <em>if the .gif files are not loading, please hit ctrl+shift+r (⌘+shift+r on mac)</em>
+
         <img src="https://salmonsabshimi.github.io/images/2024-11-06-domain_int.png" alt="Corner Image" class="corner-image">
-          <h2>1. Inactive PI3Ka</h2>
+          <h3>Inactive PI3Ka</h3>
           <p>p110α bound to n/iSH2 p85α</p>
-          
-          <video width="640" height="360" controls>
-  <source src="" type="video/gif"> ## to edit
-  Your browser does not support the video tag.
-</video>
-          
-           <h2>2. Active PI3Ka</h2>
-          <p>∆ABD p110α</p>
-          <video width="640" height="360" controls>
-  <source src="" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-          
+          <h4>PC1</h4>
+<img src="https://salmonsabshimi.github.io/images/PC1_R1_v2.gif" alt="inactive PI3Ka PC1 GIF" style="max-width: 70%; height: auto;"> <br>
+          <h4>PC2</h4>
+<img src="https://salmonsabshimi.github.io/images/PC2_R1.gif" alt="inactive PI3Ka PC2 GIF" style="max-width: 70%; height: auto;"> <br>
+
+
+
+
+
 
         </div>
     </div>
