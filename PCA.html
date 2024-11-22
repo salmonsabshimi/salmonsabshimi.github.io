@@ -190,8 +190,16 @@ iframe {
     <div class="content">
       <div class="text-section">
         <h1>Principal Component Analysis (PCA) </h1>
-        <p>conducted after RMSD analyses to further evaluate the convergence of replicates and identify dominant motions</p>
-    <p>PCA was conducted on R1 and its eigenvectors were used as the reference space for analysing the trajectories of R2 & R3 after alignment to an average structure, based on Cα atoms</p>
+        <small>conducted after RMSD analyses to further evaluate the convergence of replicates and identify dominant motions</small>
+    <p>PCA was performed using concatenated trajectories, where ≥ 2 trajectories were combined, and an average structure was calculated 
+    based on the Cα atoms of the catalytic subunit to serve as a reference for alignment. <br>
+    <br> The alignment step was conducted to remove artefacts caused by overall rotations and translations, ensuring that the analysis focused exclusively on internal conformational changes. <br> 
+        <br>  Following alignment, the covariance matrix of the concatenated trajectory was computed and diagonalised
+    to obtain the eigenvectors and their corresponding eigenvalues. 
+    <br> <br> Subsequently, the frames from each trajectory were projected onto the eigenvectors. 
+    
+    <br> <br> Each principal component (PC) describes collective motions. Each point on the PCA plot represents a single frame, corresponding to a specific conformation of the system.
+    </p>
 </p>
 <br>
 <h2>Inactive PI3Ka</h2>
