@@ -191,9 +191,9 @@ iframe {
       <div class="text-section">
         <h1>Principal Component Analysis (PCA) </h1>
         <small>conducted after RMSD analyses to further evaluate the convergence of replicates and identify dominant motions</small>
-    <p>PCA was performed using concatenated trajectories, where ≥ 2 trajectories were combined, and an average structure was calculated 
-    based on the Cα atoms of the catalytic subunit to serve as a reference for alignment. <br>
-    <br> The alignment step was conducted to remove artefacts caused by overall rotations and translations, ensuring that the analysis focused exclusively on internal conformational changes. <br> 
+    <p>PCA was performed using concatenated trajectories (≥ 2 trajectories combined). An average structure was calculated 
+    based on the Cα atoms of <i>PIK3CA</i> to serve as reference for alignment. <br>
+    <br> Alignment step was conducted to remove artefacts caused by overall rotations and translations, to ensure focus on internal conformational changes. <br> 
         <br>  Following alignment, the covariance matrix of the concatenated trajectory was computed and diagonalised
     to obtain the eigenvectors and their corresponding eigenvalues. 
     <br> <br> Subsequently, the frames from each trajectory were projected onto the eigenvectors. 
@@ -207,15 +207,13 @@ iframe {
 
     <iframe src="https://salmonsabshimi.github.io/plots/PCA_WT_inactive.html" width="800" height="600" frameborder="0"></iframe>
     
-    <p>It appears that R2 is positioned slightly farther from R1 and R3 in PCA space, forming a distinct and smaller cluster. 
+    <p>R2 is positioned slightly farther from R1 and R3 in PCA space, forming a distinct and smaller cluster. 
     <br> However, when one tilts the axis to toggle PC1 as the horizontal axis, the replicates show some degree of overlap, suggesting partial convergence. 
-    <br> <br> The smaller spread of R2 is consistent 
-    with the observation that its calculated 
-    RMSD was lower compared to the other replicates. 
-    <br> This suggests that R2 potentially samples a lower-energy conformational state, where it remains 
+    <br> <br> This smaller spread of R2 is consistent with the observation that its RMSD was lower compared to the other replicates. 
+    <br>R2 potentially samples a lower-energy conformational state, where it remains 
     more restricted in its dynamics. 
     
-    <br> <br> Furthermore, the replicates collectively occupy a relatively small region of PCA space compared to the active state, indicating that the inactive state is less dynamic and more stable.
+    <br> <br> Additionally, the replicates collectively occupy a relatively small region of PCA space compared to the active state, indicating that the inactive state is less dynamic and more stable.
     </p>
     <br>
     <h2>Active PI3Ka</h2>
