@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.centered-div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test {
+    color: black;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+}
+
+button {
+    height: 50px;
+    width: 60px;
+    padding: 10px;
+    border: 2px solid red;
+    margin: 10px;
+}
+
