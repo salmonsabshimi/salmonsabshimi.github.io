@@ -1,0 +1,28 @@
+header {
+    position: relative;
+}
+
+#lamp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 192px;
+    height: 192px;
+}
+.lamp { 
+    position: absolute;
+    inset: 0;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.cord{
+    position: absolute;
+    bottom: -55px;      
+    left: 67%;
+    width: 192px;        
+    height: 192px;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
+    cursor: pointer;
+  }
