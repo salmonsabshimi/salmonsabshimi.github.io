@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-header {
-    position: relative;
-}
 :root{
     --base-color: white;
     --base-variant: #e8e9ed;
-    --text-color: #111528;
+    --text-color: #0a0c17;
     --secondary-text: #232738;
     --primary-color: #3a435d;
     --accent-color: #0071ff;
@@ -46,5 +43,13 @@ p {
     font-size: 28px;
 }
 
+.lamp.off {
+    display: none;
+}
 
-
+.darkmode .lamp.on {
+    display: none;
+}
+.darkmode .lamp.off {
+    display: block;
+}

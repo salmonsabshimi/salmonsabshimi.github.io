@@ -19,10 +19,42 @@ header {
 .cord{
     position: absolute;
     bottom: -55px;      
-    left: 67%;
+    left: 68.5%;
     width: 192px;        
     height: 192px;
     transform: translateX(-50%);
     image-rendering: pixelated;
     cursor: pointer;
+    transform-origin: top center;
   }
+
+  /* cord animations */
+  @keyframes sway {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(3.5deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    
+  }
+
+ 
+  @keyframes yank {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    
+  }
+  .cord:hover:not(.pulled)         { animation: sway 0.8s ease-in-out; }
+  .cord.pulled       { animation: yank 0.2s ease-out; }
+
